@@ -77,7 +77,6 @@ class DB {
       $result = $this->conn->query($sql);
       if ($result === true) {
         $this->last_message = "ieraksts pievienots";
-        echo "id: " . $this->conn->insert_id;
         return $this->conn->insert_id;
       }
       else {
@@ -108,6 +107,6 @@ class DB {
     }
 
     public function delete() {
-
+      echo 'test';
     }
 }
