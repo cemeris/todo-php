@@ -1,8 +1,8 @@
 <?php 
- function template() {
+ function template($text, $status) {
 ?>
-<div>
-    <pre></pre>
+<div class="<?=$status == 1 ? 'done' : '';?>">
+    <pre><?=$text;?></pre>
     <a href="#" class="option"
         ><svg
         viewBox="0 0 3 13"

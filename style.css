@@ -31,10 +31,6 @@ textarea {
   text-decoration: line-through;
 }
 
-.task-list .template {
-  display: none;
-}
-
 .option {
   align-self: center;
   padding: 4px;

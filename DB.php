@@ -49,8 +49,7 @@ class DB {
         if ($result) {
           if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-              $this->last_message .= json_encode($row) . "<br>";
-              template();
+              template($row['text'], $row['status']);
             }
           } else {
             $this->last_message = "0 results";
