@@ -4,7 +4,7 @@
 <h1>todo page</h1>
 
 
-<form action="" class="new-task">
+<form action="" method="post" class="new-task">
     <textarea name="task" required></textarea>
     <button type="submit">Izveidot</button>
 </form>

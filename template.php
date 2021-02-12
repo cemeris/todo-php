@@ -1,7 +1,7 @@
 <?php 
- function template($text, $status) {
+ function template($id, $text, $status) {
 ?>
-<div class="<?=$status == 1 ? 'done' : '';?>">
+<div class="<?=$status == 1 ? 'done' : '';?>" data-id="<?=$id;?>">
     <pre><?=$text;?></pre>
     <a href="#" class="option"
         ><svg

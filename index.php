@@ -4,9 +4,8 @@ include 'DB.php';
 
 $todo = new DB('todo-tasks');
 
-echo $todo->last_message;
-echo "todo-php";
-
-
+if (array_key_exists('task', $_POST)) {
+    echo $_POST['task'];
+}
 
 include "view.php";
