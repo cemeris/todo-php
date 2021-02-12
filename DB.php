@@ -1,11 +1,11 @@
 <?php
+include_once 'template.php';
 class DB {
     protected $conn;
     protected $table;
     public $last_message = '';
 
     public function __construct($table_name) {
-
         $this->table = $table_name;
         $servername = "localhost";
         $username = "root";
@@ -42,7 +42,6 @@ class DB {
     }
 
     public function get() {
-      include 'template.php';
         $sql = "SELECT * FROM `$this->table`";
         $result = $this->conn->query($sql);
         
@@ -74,12 +73,12 @@ class DB {
         }
       }
 
-
-      $sql = "INSERT INTO `$this->table` ($columns) VALUES ($values); SELECT LAST_INSERT_ID();";
+      $sql = "INSERT INTO `$this->table` ($columns) VALUES ($values);";
       $result = $this->conn->query($sql);
-    
       if ($result === true) {
         $this->last_message = "ieraksts pievienots";
+        echo "id: " . $this->conn->insert_id;
+        return $this->conn->insert_id;
       }
       else {
         $this->last_message = $sql. "neizdevās inserts";
