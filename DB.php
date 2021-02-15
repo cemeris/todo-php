@@ -33,7 +33,7 @@ class DB {
       $createdAt =  $d->format("Y-m-d H:m:s");
       $modifiedAt = $d->format("Y-m-d H:m:s");
 
-      $this->set([
+      return $this->set([
         'text' => $text,
         'status' => $status,
         'createdAt' => $createdAt,

@@ -8,6 +8,22 @@
     <textarea name="task" required></textarea>
     <button type="submit">Izveidot</button>
 </form>
+<form action="" method="post" class="update">
+    <textarea name="task" required></textarea>
+    <input type="hidden" name="update" value="">
+    <button type="submit">Atjaunot</button>
+</form>
 <div class="task-list">
     <?php $todo->get(); ?>
 </div>
+
+<script>
+    function startUpdate(e) {
+        e.preventDefault();
+        let task = this.parentElement.parentElement;
+        let pre = task.querySelector('pre');
+        let textarea = document.querySelector('.update textarea');
+
+        textarea.value = pre.textContent;
+    }
+</script>

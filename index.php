@@ -8,7 +8,11 @@ $todo = new DB('todo-tasks');
 
 if (array_key_exists('task', $_POST)) {
     if (is_string($_POST['task'])) {
-        $todo->setData($_POST['task'], 0);
+        $id = $todo->setData($_POST['task'], 0);
+        if ($id) {
+            echo $id;
+            header('Location: /');
+        }
     }
 }
 
