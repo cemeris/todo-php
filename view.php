@@ -22,7 +22,11 @@
         e.preventDefault();
         let task = this.parentElement.parentElement;
         let pre = task.querySelector('pre');
-        let textarea = document.querySelector('.update textarea');
+        let update = document.querySelector('.update');
+        let textarea = update.querySelector('textarea');
+        let input = update.querySelector('[name="update"]');
+
+        input.value = task.getAttribute('data-id');
 
         textarea.value = pre.textContent;
     }
