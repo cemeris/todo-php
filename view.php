@@ -9,7 +9,7 @@
     <button type="submit">Izveidot</button>
 </form>
 <form action="" method="post" class="update">
-    <textarea name="task" required></textarea>
+    <textarea name="task-description" required></textarea>
     <input type="hidden" name="update" value="">
     <button type="submit">Atjaunot</button>
 </form>

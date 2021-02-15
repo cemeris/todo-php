@@ -23,4 +23,11 @@ if (array_key_exists('remove', $_REQUEST)) {
     }
 }
 
+if (array_key_exists('update', $_REQUEST)) {
+    $id = $_REQUEST['update'];
+    if ((int) $id == $id && $id > 0) {
+        $todo->update($_REQUEST['update'], ['text' => 'test new value']);
+    }
+}
+
 include "view.php";
