@@ -23,10 +23,14 @@ if (array_key_exists('remove', $_REQUEST)) {
     }
 }
 
-if (array_key_exists('update', $_REQUEST)) {
+if (
+    array_key_exists('update', $_REQUEST) &&
+    array_key_exists('task-description', $_REQUEST)
+) {
     $id = $_REQUEST['update'];
+    $text = $_REQUEST['task-description'];
     if ((int) $id == $id && $id > 0) {
-        $todo->update($_REQUEST['update'], ['text' => 'test new value']);
+        $todo->update($id, ['text' => $text]);
     }
 }
 
