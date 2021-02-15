@@ -109,7 +109,7 @@ class DB {
     public function delete($id) {
       $sql = "DELETE FROM `$this->table` WHERE id=$id";
 
-      if ($this->conn->query($sql) === TRUE) {
+      if ($this->conn->query($sql) === true) {
         $this->last_message = "Record deleted successfully";
       } else {
         $this->last_message = "Error deleting record: " . $this->conn->error;
