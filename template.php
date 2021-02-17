@@ -1,7 +1,7 @@
 <?php 
  function template($id, $text, $status) {
 ?>
-<div class="<?=$status == 1 ? 'done' : '';?>" data-id="<?=$id;?>">
+<div onclick="markCompleted.bind(this)(event)" class="<?=$status == 1 ? 'done' : '';?>" data-id="<?=$id;?>">
     <pre><?=$text;?></pre>
 
     <div>

@@ -36,6 +36,19 @@ if (
     }
 }
 
+/*
+if (
+    array_key_exists('mark-done', $_REQUEST) &&
+    array_key_exists('task-description', $_REQUEST)
+) {
+    $id = $_REQUEST['update'];
+    $text = $_REQUEST['task-description'];
+    if ((int) $id == $id && $id > 0 && testText($text)) {
+        $todo->update($id, ['text' => $text]);
+    }
+}
+*/
+
 include "view.php";
 
 

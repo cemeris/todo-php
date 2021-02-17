@@ -30,4 +30,11 @@
 
         textarea.value = pre.textContent;
     }
+
+    function markCompleted(e) {
+        e.preventDefault();
+        let id = this.getAttribute('data-id');
+        let new_status = this.classList.contains('done') ? 0 : 1;
+        location.href = "?mark-done=" + id + "&status=" + new_status;
+    }
 </script>
